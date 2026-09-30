@@ -23,6 +23,21 @@
 
 ---
 
+> **🍴 toxicwind fork** of [Vanszs/VansRouter](https://github.com/Vanszs/VansRouter).
+> The body of this README is upstream's documentation, kept verbatim — badges and
+> package links below still point at the upstream project. Divergences maintained
+> in this fork (all on `main`, Sept 2026):
+>
+> - **SQLite driver resilience** — keep healthy database files when the SQLite
+>   driver can't load; spread betterSqlite query parameters; better-sqlite3
+>   N-API prebuild support on Node 22+ (`7f42ef4`, `245ffbc`).
+> - **Docker native-deps trim** — install only better-sqlite3 in native-deps to
+>   avoid 500+ package QEMU overhead (`cb775ef`).
+> - **Release hardening** — fast multi-arch docker builds, sqlite corruption
+>   recovery, semaphore wake race fixes (`a8a7ff3`, `af64d4a`).
+>
+> License: MIT (decolua and contributors) — see [LICENSE](./LICENSE).
+
 ## 🤔 Why VansRouter?
 
 **Stop wasting money, tokens and hitting limits:**
