@@ -298,28 +298,12 @@ export async function proxy(request) {
     return NextResponse.redirect(new URL("/masuk", request.url));
   }
 
-  // / - redirect to dashboard if authenticated, otherwise return JSON welcome
+  // / - redirect to dashboard if authenticated, otherwise redirect to /masuk
   if (pathname === "/") {
     if (await isAuthenticated(request)) {
       return NextResponse.redirect(new URL("/dashboard", request.url));
     }
-
-    const host = request.headers.get("host") || "localhost:3000";
-    const protocol = request.headers.get("x-forwarded-proto") || "https";
-    const baseUrl = `${protocol}://${host}`;
-
-    return new NextResponse(
-      JSON.stringify({
-        message: `Welcome to VansAI! Use ${baseUrl}/v1 as your API endpoint.`,
-      }),
-      {
-        status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    );
+    return NextResponse.redirect(new URL("/masuk", request.url));
   }
 
   // Protect all dashboard routes

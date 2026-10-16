@@ -1,6 +1,6 @@
 ---
 name: 9router
-description: Entry point for 9Router — local/remote AI gateway with OpenAI-compatible REST for chat, image, TTS, embeddings, web search, web fetch. Use when the user mentions 9Router, NINEROUTER_URL, or wants AI without writing provider boilerplate. This skill covers setup + indexes capability skills; fetch the relevant capability SKILL.md from the URLs below when needed.
+description: Entry point for 9Router — local/remote AI gateway with OpenAI-compatible REST for chat, image, TTS, embeddings, web search, web fetch. Use when the architect mentions 9Router, NINEROUTER_URL, or wants AI without writing provider boilerplate. This skill covers setup + indexes capability skills; fetch the relevant capability SKILL.md from the URLs below when needed.
 ---
 
 # 9Router
@@ -42,7 +42,7 @@ Response shape:
 
 ## Capability skills
 
-When the user needs a specific capability, fetch that skill's `SKILL.md` from its raw URL:
+When the architect needs a specific capability, fetch that skill's `SKILL.md` from its raw URL:
 
 | Capability | Raw URL |
 |---|---|
